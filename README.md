@@ -98,9 +98,17 @@ POST   /api/bloodpressure           Uusi mittaus
 GET    /api/bloodpressure/:id       Yksittäinen mittaus
 PUT    /api/bloodpressure/:id       Päivitä mittaus
 DELETE /api/bloodpressure/:id       Poista mittaus
+GET    /health                      Palvelimen tila (status, timestamp, uptime)
 ```
 
 Kaikki suojatut reitit vaativat otsikossa: `Authorization: Bearer <token>`
+
+---
+
+## Muutokset (my-branch)
+
+- Lisätty `timestamp` health-reitin vastaukseen — näyttää nykyisen ajan ISO-muodossa
+- Lisätty `uptime` health-reitin vastaukseen — näyttää kuinka kauan palvelin on ollut käynnissä
 
 ---
 

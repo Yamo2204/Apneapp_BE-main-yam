@@ -7,6 +7,7 @@ healthRouter.get('/', (req, res) => {
     status: 'ok',
     message: 'Backend is running',
     timestamp: new Date().toISOString(),
+    uptime: Math.floor(process.uptime()) + ' seconds',
   });
 });
 
